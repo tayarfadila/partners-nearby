@@ -1,0 +1,81 @@
+@import "help/color";
+@import "../styles.scss";
+.bg-gray {
+  background-color: #212529;
+  color: white;
+}
+.logo-img {
+  width: 6rem;
+}
+.logo-big-img {
+  width: 10rem;
+}
+.full-ht {
+  min-height: 100vh;
+}
+.main-nav {
+  box-shadow: 0px 0px 5px 1px lightgray;
+  a {
+    color: black !important;
+  }
+  .active > a, a:hover {
+    color: $primary-navy !important;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+}
+.navbar-fixed-top {
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  z-index: 999;
+  padding-right: 0rem!important;
+  padding-left: 0rem!important;
+}
+.container-login {
+  width: 100%;
+  min-height: 85vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // padding: 15px;
+}
+
+.wrap-login {
+  // width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 3rem;
+  box-shadow: 0px 1px 5px 1px gray;
+  background-color: white;
+}
+
+.login-form {
+  width: 100%;
+  // padding: 25px;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 7px;
+  color: darkgray;
+  min-width: 50px;
+  text-align: center;
+}
+.input-field {
+  width: 100%;
+  padding: 0 0 0 50px !important;
+}

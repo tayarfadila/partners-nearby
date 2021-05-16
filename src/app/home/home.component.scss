@@ -1,0 +1,128 @@
+@import "../help/color";
+@import "../../styles.scss";
+.header {
+  height: auto;
+  // background: #594b4f;
+  width: 100%;
+  padding: 10px !important;
+  margin-bottom: 17px;
+}
+
+.txt_item_per_page {
+  font-family: cursive;
+  color: red;
+}
+
+#item_per_page_text {
+  width: 80px !important;
+  padding: 0 5px 0 5px;
+  margin: 0 0px 0 5px;
+}
+
+.btn_add_device {
+  margin: 0 10px 0 10px;
+  border-radius: 10px;
+  color: red;
+  background-color: brown;
+}
+
+.btn_add_device:focus,
+.btn_add_device:hover {
+  background-color: white; //#f8d492;
+  color: brown;
+}
+
+#search_text {
+  margin: 0 10px 0 10px;
+}
+
+.popup-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.items {
+  margin: 3px;
+}
+
+.popup-locationid {
+  margin: 5px 0 0 0 !important;
+}
+
+.div_close:hover,
+.div_close:focus {
+  background-color: #594b4f;
+  border-radius: 5px;
+}
+
+.btn_close {
+  margin: 3px;
+}
+
+// autocomplete input
+.ta-results.list-group {
+  max-width: 400px;
+  min-width: 400px;
+  overflow: auto;
+  max-height: 75vh;
+  border: 1px solid #ccc;
+  margin-top: 35px !important;
+}
+
+.ta-backdrop {
+  position: relative !important;
+  /* z-index: 2; */
+}
+
+.ta-item[_ngcontent-grb-c58] {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.typeahead-wrap .list-group-item {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.typeahead-wrap .list-group-item {
+  width: 100%;
+  text-align: left;
+}
+
+.typeahead-wrap .list-group-item.active {
+  background-color: #ccc;
+}
+
+.typeahead-wrap .list-group-item .item-name {
+  font-weight: bold;
+}
+
+.nav-pills {
+  border-bottom: 1px solid purple;
+}
+.nav-pills li a {
+  color: white;
+  display: block;
+  line-height: 2em;
+  padding: 7px 15px;
+  font-weight: bold;
+  background-color: purple;
+}
+ul li a,
+ul li a:hover {
+  text-decoration: none;
+}
+.nav-pills li a.active {
+  color: yellow;
+}
+#myChart {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

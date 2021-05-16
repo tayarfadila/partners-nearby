@@ -1,0 +1,65 @@
+<div class="d-flex flex-column min-vh-100">
+  <div class="container pt-5">
+    <div class="row mt-5 mb-3">
+      <div class="col-6">
+        Partners near <b>{{ mainLocationName }}</b> in 
+      </div>
+
+      <div class="col-4"><input
+          type="number"
+          class="form-control form-control-sm"
+          value="{{ maxDisctanceInKm }}"
+          (keyup)="updateRange($event)"
+          id="km"
+        />
+      </div>
+      <div class="col-2"><label for="km"> kilometers </label></div>
+    </div>
+    <div *ngIf="rows && rows.length && !loading; else emptyData">
+      <table
+        class="table table-bordered table-hover table-responsive"
+      >
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col" *ngFor="let field of fields">{{ field.name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of rows; let index = index">
+            <th scope="row">
+              {{ record.id }}
+            </th>
+            <td *ngFor="let field of fields">
+              <div
+                *ngIf="field.name == 'Offices'; else normalField"
+              >
+                <div *ngFor="let item of record.offices">
+                  <table class="table">
+                    <tbody>
+                      <tr *ngFor="let sub of field.subFields">
+                        <th scope="row">{{ sub.name }}</th>
+                        <td >
+                          {{ item[sub.prop] }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <ng-template #normalField>
+                {{ record[field.prop] }}
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #emptyData
+      ><p class="text-center pt-5">
+        {{ loading ? "Loading..." : "No partners in this range" }}
+      </p></ng-template
+    >
+  </div>
+</div>

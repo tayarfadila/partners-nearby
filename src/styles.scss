@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/help/color";
+@import "~bootstrap/scss/bootstrap";
+body {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $font;
+  text-align: left;
+  background-color: #fff;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.ngx-datatable.material {
+  box-shadow: unset;
+}
+.ngx-datatable.material .datatable-header .datatable-header-cell,
+.ngx-datatable.material
+  .datatable-body
+  .datatable-body-row
+  .datatable-body-cell,
+.ngx-datatable.material .datatable-footer {
+  font-size: 1rem !important;
+  color: $font;
+}
+
+.main-bg {
+  background: linear-gradient(
+    -45deg,
+    rgba(5, 197, 222, 1) 0%,
+    $primary-navy 100%
+  );
+  // transform: skewX(-28.3deg);
+  //
+  min-height: 100vh;
+  position: relative;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+.main-bg:before {
+  //background: url("assets/pattern.png") 0 0 repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  opacity: 0.1;
+  z-index: -1;
+}
+.main-btn {
+  background: linear-gradient(90deg, #004b87 0%, #05c3de 100%);
+  border-radius: 6px 19px 6px 6px;
+  border: 0px;
+}
+.main-btn:hover {
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 6px;
+  background: linear-gradient(
+    to right,
+    rgba(118, 37, 131, 1) 0%,
+    rgba(224, 0, 78, 1) 100%
+  );
+}
+.title {
+  color: $font;
+}
+.ft-white {
+  color: white !important;
+}
+.nav-link {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 5px !important;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px !important;
+  background: $primary-navy;
+}
+.datatable-row-group {
+  border-bottom: 1px solid #dee2e6;
+}
