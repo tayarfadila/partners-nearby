@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     CommonModule,
     ModalModule.forRoot(),
